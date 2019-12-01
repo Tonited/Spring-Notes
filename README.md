@@ -9,15 +9,16 @@ date: 2019.08.15
 
 #                             Spring入门笔记
 
-​                                                                                                                                                                         *Tonited*
-
-[TOC]
+​                                                                                                                                    *Tonited*
 
 # 前言
 
 picture-resources: imooc
+
 IDE: IDEA2019.2
+
 java-version: 11.0.3
+
 date: 2019.08.15
 
 这篇笔记是本人零基础看Spring入门网课时整理的笔记，同时加入了一些自己的理解，方便大家学习和使用，内容可能存在错误或者在理解上有一定问题，如果有任何问题、意见、见解或关于侵权请联系我，QQ710260712，申请理由请写“Spring入门笔记勘误”。
@@ -63,18 +64,18 @@ date: 2019.08.15
 6. 官方下载Spring 4.X 最新开发版本
 7. Spring 4.2 版本目录结构
 
-![1565947086285](../Spring%E7%AC%94%E8%AE%B0/assets/1565947086285.png)
+![1565947086285](./assets/1565947086285.png)
 
 8. 导入Spring核心开发包到创建工程
 
-![1565947143247](../Spring%E7%AC%94%E8%AE%B0/assets/1565947143247.png)
+![1565947143247](./assets/1565947143247.png)
 
 #### Maven pom依赖
 
 - 使用maven创建spring项目时需要在pom中引入以上依赖
 - 还要引入单元测试依赖
 
-![单元测试依赖](../Spring%E7%AC%94%E8%AE%B0/assets/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E4%BE%9D%E8%B5%96.png)
+![单元测试依赖](./assets/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E4%BE%9D%E8%B5%96.png)
 
 - **<font color="red">本笔记所记录的示例均为使用maven方式创建和管理spring项目，以下记录均为maven记录</font>**
 
@@ -82,11 +83,11 @@ date: 2019.08.15
 
 #### · 传统方式
 
-![1565947678639](../Spring%E7%AC%94%E8%AE%B0/assets/1565947678639.png)
+![1565947678639](./assets/1565947678639.png)
 
 #### · Spring方式实现
 
-![1565947765945](../Spring%E7%AC%94%E8%AE%B0/assets/1565947765945.png)
+![1565947765945](./assets/1565947765945.png)
 
 #### · 读取磁盘中的配置文件
 
@@ -109,17 +110,17 @@ date: 2019.08.15
 
 ## 1. Spring的工厂类
 
-![1565948243266](../Spring%E7%AC%94%E8%AE%B0/assets/1565948243266.png)
+![1565948243266](./assets/1565948243266.png)
 
 - 工厂类
 
-  ![1565948894592](../Spring%E7%AC%94%E8%AE%B0/assets/1565948894592.png)
+  ![1565948894592](./assets/1565948894592.png)
 
 
 
 - 传统方式工厂类：BeanFactory
 
-  ![1565948950620](../Spring%E7%AC%94%E8%AE%B0/assets/1565948950620.png)
+  ![1565948950620](./assets/1565948950620.png)
 
 ## 2. Spring的Bean管理（XML方式）
 
@@ -127,13 +128,13 @@ date: 2019.08.15
 
 #### · ApplicationContext——XML配置
 
-![1565949609472](../Spring%E7%AC%94%E8%AE%B0/assets/1565949609472.png)
+![1565949609472](./assets/1565949609472.png)
 
 #### · 使用类构造器实例化（默认无参数）
 
 ApplicationContext在创造时调用类的构造函数
 
-![1565949489230](../Spring%E7%AC%94%E8%AE%B0/assets/1565949489230.png)
+![1565949489230](./assets/1565949489230.png)
 
 #### · 使用静态工厂方法实例化（简单工厂模式）
 
@@ -141,17 +142,17 @@ ApplicationContext在创造时调用类的构造函数
 
 **这个Bean由静态方法创建，只会创造一个Bean，获取时获取的是同一个Bean**
 
-![1565949695517](../Spring%E7%AC%94%E8%AE%B0/assets/1565949695517.png)
+![1565949695517](./assets/1565949695517.png)
 
 #### · 使用实例工厂方法实例化（工厂方法模式）
 
 与上图简单工厂模式相同，区别是工厂方法创建的Bean不是单例
 
-![1565953301428](../Spring%E7%AC%94%E8%AE%B0/assets/1565953301428.png)
+![1565953301428](./assets/1565953301428.png)
 
 ### 2）Bean的配置
 
-![1565953718273](../Spring%E7%AC%94%E8%AE%B0/assets/1565953718273.png)
+![1565953718273](./assets/1565953718273.png)
 
 - id和name
   - 一般情况下，装配一个Bean时，通过指定一个id属性作为Bean的名称
@@ -176,7 +177,7 @@ ApplicationContext在创造时调用类的构造函数
 
 Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此spring可以在创建和拆卸Bean的时候调用Bean的两个生命周期方法
 
-![1565957255381](../Spring%E7%AC%94%E8%AE%B0/assets/1565957255381.png)
+![1565957255381](./assets/1565957255381.png)
 
 <font color="red">注意：destory只有在scope=singleton时有效</font>
 
@@ -190,9 +191,9 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
 
      
 
-   ![1565957786821](../Spring%E7%AC%94%E8%AE%B0/assets/1565957786821.png)
+   ![1565957786821](./assets/1565957786821.png)
 
-   ![1565958219380](../Spring%E7%AC%94%E8%AE%B0/assets/1565958219380.png)
+   ![1565958219380](./assets/1565958219380.png)
 
    
 
@@ -202,11 +203,11 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
 
      
 
-   ![1565958185028](../Spring%E7%AC%94%E8%AE%B0/assets/1565958185028.png)
+   ![1565958185028](./assets/1565958185028.png)
 
-   ![1565957999293](../Spring%E7%AC%94%E8%AE%B0/assets/1565957999293.png)
+   ![1565957999293](./assets/1565957999293.png)
 
-   ![1565958233217](../Spring%E7%AC%94%E8%AE%B0/assets/1565958233217.png)
+   ![1565958233217](./assets/1565958233217.png)
 
    
 
@@ -216,11 +217,11 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
 
      
 
-   ![1565958367139](../Spring%E7%AC%94%E8%AE%B0/assets/1565958367139.png)
+   ![1565958367139](./assets/1565958367139.png)
 
-   ![1565958063051](../Spring%E7%AC%94%E8%AE%B0/assets/1565958063051.png)
+   ![1565958063051](./assets/1565958063051.png)
 
-   ![1565958449383](../Spring%E7%AC%94%E8%AE%B0/assets/1565958449383.png)
+   ![1565958449383](./assets/1565958449383.png)
 
    
 
@@ -230,9 +231,9 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
 
    
 
-   ![1565959056700](../Spring%E7%AC%94%E8%AE%B0/assets/1565959056700.png)
+   ![1565959056700](./assets/1565959056700.png)
 
-   ![1565959071715](../Spring%E7%AC%94%E8%AE%B0/assets/1565959071715.png)
+   ![1565959071715](./assets/1565959071715.png)
 
    
 
@@ -244,9 +245,9 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
 
      
 
-   ![1565959721679](../Spring%E7%AC%94%E8%AE%B0/assets/1565959721679.png)
+   ![1565959721679](./assets/1565959721679.png)
 
-   ![1565959878144](../Spring%E7%AC%94%E8%AE%B0/assets/1565959878144.png)
+   ![1565959878144](./assets/1565959878144.png)
 
    
 
@@ -254,9 +255,9 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
 
    
 
-   ![1565960127024](../Spring%E7%AC%94%E8%AE%B0/assets/1565960127024.png)
+   ![1565960127024](./assets/1565960127024.png)
 
-   ![1565960206398](../Spring%E7%AC%94%E8%AE%B0/assets/1565960206398.png)
+   ![1565960206398](./assets/1565960206398.png)
 
    
 
@@ -264,11 +265,11 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
 
    
 
-   ![1565961292569](../Spring%E7%AC%94%E8%AE%B0/assets/1565961292569.png)
+   ![1565961292569](./assets/1565961292569.png)
 
-   ![1565961333428](../Spring%E7%AC%94%E8%AE%B0/assets/1565961333428.png)
+   ![1565961333428](./assets/1565961333428.png)
 
-   ![1565961368912](../Spring%E7%AC%94%E8%AE%B0/assets/1565961368912.png)
+   ![1565961368912](./assets/1565961368912.png)
 
    
 
@@ -282,9 +283,9 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
 
      
 
-     ![1565961394714](../Spring%E7%AC%94%E8%AE%B0/assets/1565961394714.png)
+     ![1565961394714](./assets/1565961394714.png)
 
-     ![1566007903579](../Spring%E7%AC%94%E8%AE%B0/assets/1566007903579.png)
+     ![1566007903579](./assets/1566007903579.png)
 
      
 
@@ -292,11 +293,11 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
 
    
 
-   ![1565961840790](../Spring%E7%AC%94%E8%AE%B0/assets/1565961840790.png)
+   ![1565961840790](./assets/1565961840790.png)
 
-   ![1565961795496](../Spring%E7%AC%94%E8%AE%B0/assets/1565961795496.png)
+   ![1565961795496](./assets/1565961795496.png)
 
-   ![1565961864209](../Spring%E7%AC%94%E8%AE%B0/assets/1565961864209.png)
+   ![1565961864209](./assets/1565961864209.png)
 
 
 
@@ -306,7 +307,7 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
 
     
 
-    ![1565962296381](../Spring%E7%AC%94%E8%AE%B0/assets/1565962296381.png)
+    ![1565962296381](./assets/1565962296381.png)
 
     
 
@@ -314,9 +315,9 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
 
     
 
-    ![1565962006316](../Spring%E7%AC%94%E8%AE%B0/assets/1565962006316.png)
+    ![1565962006316](./assets/1565962006316.png)
 
-    ![1565962338706](../Spring%E7%AC%94%E8%AE%B0/assets/1565962338706.png)
+    ![1565962338706](./assets/1565962338706.png)
 
 #### （3. beanpostprocessor的作用（Java动态代理示例）
 
@@ -328,7 +329,7 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
 
   - 下面的例子使用了Java的动态代理
 
-    ![1566048608577](../Spring%E7%AC%94%E8%AE%B0/assets/1566048608577.png)
+    ![1566048608577](./assets/1566048608577.png)
 
 ## 3. Spring的几种属性注入
 
@@ -346,9 +347,9 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
 
   
 
-  ![1566038373815](../Spring%E7%AC%94%E8%AE%B0/assets/1566038373815.png)
+  ![1566038373815](./assets/1566038373815.png)
 
-  ![1566038330789](../Spring%E7%AC%94%E8%AE%B0/assets/1566038330789.png)
+  ![1566038330789](./assets/1566038330789.png)
 
   
 
@@ -358,9 +359,9 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
 
   
 
-  ![1566038655792](../Spring%E7%AC%94%E8%AE%B0/assets/1566038655792.png)
+  ![1566038655792](./assets/1566038655792.png)
 
-  ![1566038677234](../Spring%E7%AC%94%E8%AE%B0/assets/1566038677234.png)
+  ![1566038677234](./assets/1566038677234.png)
 
 
 
@@ -382,9 +383,9 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
 
   
 
-  ![1566039292638](../Spring%E7%AC%94%E8%AE%B0/assets/1566039292638.png)
+  ![1566039292638](./assets/1566039292638.png)
 
-  ![1566039310780](../Spring%E7%AC%94%E8%AE%B0/assets/1566039310780.png)
+  ![1566039310780](./assets/1566039310780.png)
 
 
 
@@ -400,7 +401,7 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
   - #{topic4.content.toUpperCase()}：使用指定名属性，并使用方法
   - {T(java.lang.Math).PI}：使用静态字段或方法
 
-![1566040113107](../Spring%E7%AC%94%E8%AE%B0/assets/1566040113107.png)
+![1566040113107](./assets/1566040113107.png)
 
 
 
@@ -410,31 +411,31 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
 
   - 数组类型的属性注入
 
-    ![1566040386774](../Spring%E7%AC%94%E8%AE%B0/assets/1566040386774.png)
+    ![1566040386774](./assets/1566040386774.png)
 
     
 
   - List集合类型的属性注入
 
-    ![1566040416008](../Spring%E7%AC%94%E8%AE%B0/assets/1566040416008.png)
+    ![1566040416008](./assets/1566040416008.png)
 
     
 
   - Set集合类型的属性注入
 
-    ![1566040434186](../Spring%E7%AC%94%E8%AE%B0/assets/1566040434186.png)
+    ![1566040434186](./assets/1566040434186.png)
 
     
 
   - Map集合类型的属性注入
 
-    ![1566040456028](../Spring%E7%AC%94%E8%AE%B0/assets/1566040456028.png)
+    ![1566040456028](./assets/1566040456028.png)
 
     
 
   - Properties类型的属性注入
 
-    ![1566040506230](../Spring%E7%AC%94%E8%AE%B0/assets/1566040506230.png)
+    ![1566040506230](./assets/1566040506230.png)
 
     
 
@@ -472,7 +473,7 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
 
   - @Component 描述Spring框架中的Bean
 
-    ![1566042351014](../Spring%E7%AC%94%E8%AE%B0/assets/1566042351014.png)
+    ![1566042351014](./assets/1566042351014.png)
 
 - 除了@Component外，Spring提供了3个功能基本和@Component等效的注解
 
@@ -486,7 +487,7 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
   - 如果属性提供了get，@Value就要写在set上
   - 如果没提供get，@Value就要写在属性上
 
-  ![1566042577114](../Spring%E7%AC%94%E8%AE%B0/assets/1566042577114.png)
+  ![1566042577114](./assets/1566042577114.png)
 
 
 
@@ -501,9 +502,9 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
     - **<font color="red">注入bean类型和被注入bean类型必须都被Spring管理（上面被注解@Component或另外三个）</font>**（图中粉色框）
     - **<font color="red">按照名称注入指的是：被注入的变量的名称（图1红色框）和注入类的注解命名一致</font>**（图2红色框）
 
-    ![1567073068797](../Spring%E7%AC%94%E8%AE%B0/assets/1567073068797.png)
+    ![1567073068797](./assets/1567073068797.png)
 
-    ![1567073274762](../Spring%E7%AC%94%E8%AE%B0/assets/1567073274762.png)
+    ![1567073274762](./assets/1567073274762.png)
 
   
 
@@ -517,11 +518,11 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
 
   - @Qualifier指定注入Bean的名称，即实现了required属性
 
-    ![1566043796181](../Spring%E7%AC%94%E8%AE%B0/assets/1566043796181.png)
+    ![1566043796181](./assets/1566043796181.png)
 
   - **使用@Qualifier 指向Bean名称时，Bean必须指定相同名称**
 
-    ![1566043924048](../Spring%E7%AC%94%E8%AE%B0/assets/1566043924048.png)
+    ![1566043924048](./assets/1566043924048.png)
 
     
 
@@ -539,7 +540,7 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
     </dependency>
     ```
 
-    ![1566044706954](../Spring%E7%AC%94%E8%AE%B0/assets/1566044706954.png)
+    ![1566044706954](./assets/1566044706954.png)
 
 
 
@@ -547,9 +548,9 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
 
 - Spring初始化bean或销毁bean时，有时需要做一些处理工作，因此Spring可以在创建和拆卸bean的时候调用bean的两个生命周期方法
 
-  ![1566045146960](../Spring%E7%AC%94%E8%AE%B0/assets/1566045146960.png)
+  ![1566045146960](./assets/1566045146960.png)
 
-  ![1566045401127](../Spring%E7%AC%94%E8%AE%B0/assets/1566045401127.png)
+  ![1566045401127](./assets/1566045401127.png)
 
   
 
@@ -559,7 +560,7 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
 
 - 使用注解配置的Bean和<bean>配置的一样，默认作用范围都是singleton
 
-  ![1566045425549](../Spring%E7%AC%94%E8%AE%B0/assets/1566045425549.png)
+  ![1566045425549](./assets/1566045425549.png)
 
 
 
@@ -599,7 +600,7 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
 
     
 
-    ![1566047680902](../Spring%E7%AC%94%E8%AE%B0/assets/1566047680902.png)
+    ![1566047680902](./assets/1566047680902.png)
 
     
 
@@ -607,15 +608,15 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
 
     
 
-    ![1566047495583](../Spring%E7%AC%94%E8%AE%B0/assets/1566047495583.png)
+    ![1566047495583](./assets/1566047495583.png)
 
     
 
   - 因为在ApplicationContext.xml中已经配置了bean的id，所以不需要每个类上面用@Component等标注id了
 
-    ![1566047918257](../Spring%E7%AC%94%E8%AE%B0/assets/1566047918257.png)
+    ![1566047918257](./assets/1566047918257.png)
 
-![1566047854274](../Spring%E7%AC%94%E8%AE%B0/assets/1566047854274.png)
+![1566047854274](./assets/1566047854274.png)
 
 ## 6. 提问
 
@@ -623,7 +624,7 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
   - ApplicationContext
 - 在Spring中，已知Student类的定义，下方式属于无参构造器的方式来实例化Bean
   - <bean id="bean1" class="io.github.Tonited.Student"/>
-- 在Spring中，Bean在配置时，初始化和销毁方法配置在 <bean ../> 中的标签名是
+- 在Spring中，Bean在配置时，初始化和销毁方法配置在 <bean ./> 中的标签名是
   - init-method
   - destory-method
 - 在Spring中，假设某个bean要使用某种类型的资源，那么一般情况下，应该把资源的释放放到bean生命周期中的阶段为
@@ -652,13 +653,13 @@ Spring初始化Bean或销毁Bean时，有时需要作一些处理工作，因此
 
 假设现在我们有以下实现了一个名为UserDao接口的类，我们想在save()方法被调用前做权限校验，可以在类中写一个用于权限校验的方法checkPrivilege()，并在save()的逻辑执行前调用这个类的checkPrivilege()方法。
 
-![1](../Spring%E7%AC%94%E8%AE%B0/assets/1.png)
+![1](./assets/1.png)
 
 
 
 如果现在我们有100实现了UserDao接口的类，想在每一个类中的某个方法被调用之前都进行一步权限调用，就需要给100个类中的每一个类都写一个checkPrivilege()方法。
 
-这时你可能想到：要将权限校验的方法checkPrivilege()写在接口中，让每一个继承它的类都实现这一方法。![纵向继承](../Spring%E7%AC%94%E8%AE%B0/assets/%E7%BA%B5%E5%90%91%E7%BB%A7%E6%89%BF.png)
+这时你可能想到：要将权限校验的方法checkPrivilege()写在接口中，让每一个继承它的类都实现这一方法。![纵向继承](./assets/%E7%BA%B5%E5%90%91%E7%BB%A7%E6%89%BF.png)
 
 这种做法就是所谓的**纵向继承**，”纵向“指的是从接口继承方法这种上下父子关系
 
@@ -673,7 +674,7 @@ AOP采用的是**横向抽取机制**
 - 所谓的横向抽取机制是指将可以复用的代码抽取出来以便复用
 - AOP横向抽取机制采用的是代理机制，可以通过访问代理达到访问目标对象的目的，同时通过执行代理中的复用代码段解决代码服用问题
 
-![AOP横向抽取机制](../Spring%E7%AC%94%E8%AE%B0/assets/AOP%E6%A8%AA%E5%90%91%E6%8A%BD%E5%8F%96%E6%9C%BA%E5%88%B6.png)
+![AOP横向抽取机制](./assets/AOP%E6%A8%AA%E5%90%91%E6%8A%BD%E5%8F%96%E6%9C%BA%E5%88%B6.png)
 
 
 
@@ -689,7 +690,7 @@ AOP采用的是**横向抽取机制**
 
 ### 2）AOP的相关术语
 
-![AOP相关术语](../Spring%E7%AC%94%E8%AE%B0/assets/AOP%E7%9B%B8%E5%85%B3%E6%9C%AF%E8%AF%AD.png)
+![AOP相关术语](./assets/AOP%E7%9B%B8%E5%85%B3%E6%9C%AF%E8%AF%AD.png)
 
 - Joinpoint（连接点）：所谓连接点是指那些可以被拦截到的点。在Spring中，这些点指的是方法，**因为Spring只支持方法类型的连接点**
 - Pointcut（切入点）：所谓切入点是指我们要对哪些Jointpoint进行拦截的定义
@@ -720,7 +721,7 @@ AOP采用的是**横向抽取机制**
 
   - 执行代理的类，这个类需要实现 InvocationHandler 接口的 invoke() 方法
 
-    ![1566193384737](../Spring%E7%AC%94%E8%AE%B0/assets/1566193384737.png)
+    ![1566193384737](./assets/1566193384737.png)
 
     - 本例让此代理类实现了此接口，同时作为代理类和执行代理类，所以这时参数为 this
 
@@ -786,7 +787,7 @@ AOP采用的是**横向抽取机制**
   
       public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
           if("save".equals(method.getName())){
-              System.out.println("权限校验...");
+              System.out.println("权限校验..");
               return method.invoke(userDao,args);
           }
           return method.invoke(userDao,args);
@@ -1047,11 +1048,11 @@ AOP采用的是**横向抽取机制**
 
 - Aop联盟：aoppalliance
 
-  ![SpringAop一般切面案例-Aop联盟](../Spring%E7%AC%94%E8%AE%B0/assets/SpringAop%E4%B8%80%E8%88%AC%E5%88%87%E9%9D%A2%E6%A1%88%E4%BE%8B-Aop%E8%81%94%E7%9B%9F.png)
+  ![SpringAop一般切面案例-Aop联盟](./assets/SpringAop%E4%B8%80%E8%88%AC%E5%88%87%E9%9D%A2%E6%A1%88%E4%BE%8B-Aop%E8%81%94%E7%9B%9F.png)
 
 - Spring AOP：spring-aop
 
-  ![SpringAop一般切面案例-SpringAOP](../Spring%E7%AC%94%E8%AE%B0/assets/SpringAop%E4%B8%80%E8%88%AC%E5%88%87%E9%9D%A2%E6%A1%88%E4%BE%8B-SpringAOP.png)
+  ![SpringAop一般切面案例-SpringAOP](./assets/SpringAop%E4%B8%80%E8%88%AC%E5%88%87%E9%9D%A2%E6%A1%88%E4%BE%8B-SpringAOP.png)
 
 
 
@@ -1102,7 +1103,7 @@ AOP采用的是**横向抽取机制**
         ```xml
         <list>
         	<value></value>
-            ...
+            ..
         </list>
         
         ```
@@ -1324,7 +1325,7 @@ AOP采用的是**横向抽取机制**
 - 语法
 
   - “ * ”表示任意字符
-  - “ .. ” 表示任意参数
+  - “ . ” 表示任意参数
 
   ```xml
    execution( [<访问修饰符>] <返回类型> <方法名>([<参数>]) <异常> )
@@ -1335,21 +1336,21 @@ AOP采用的是**横向抽取机制**
 
   ```xml
   - 匹配所有类的public方法 
-  	execution(public * *(..))
+  	execution(public * *(.))
   
   - 匹配指定包下所有类方法（不包含子包）(第一个*是返回类型)
-  	execution (* com.dao.*(..))
+  	execution (* com.dao.*(.))
   - 匹配指定包下所有类方法（包含包、子包下的所有类）(在包名后变为两个点即可)
-  	execution(* com.dao..*(..))
+  	execution(* com.dao.*(.))
   
   - 匹配指定类所有方法 
-  	execution(* com.service.UserService.*(..))
+  	execution(* com.service.UserService.*(.))
   
   - 匹配实现特定接口所有类方法
-  	execution(* com.dao.GenericDAO+.*(..))
+  	execution(* com.dao.GenericDAO+.*(.))
   
   - 匹配所有save开头的方法
-  	execution(* save*(..))
+  	execution(* save*(.))
   
   ```
 
@@ -1383,7 +1384,7 @@ AOP采用的是**横向抽取机制**
   @Aspect
   public class MyAspectAnno
   {
-      @Before(value="execution(* com.aspectJ.demo1.ProductDao.save(..))")
+      @Before(value="execution(* com.aspectJ.demo1.ProductDao.save(.))")
       public void before(JoinPoint joinPoint){
           System.out.println("前置通知");
       }
@@ -1399,7 +1400,7 @@ AOP采用的是**横向抽取机制**
 
     ```java
     //要增强的代码
-    @Before(value="execution(* com.aspectJ.demo1.ProductDao.save(..))")
+    @Before(value="execution(* com.aspectJ.demo1.ProductDao.save(.))")
     //通知
     public void before(JoinPoint joinPoint){
             System.out.println("前置通知");
@@ -1413,7 +1414,7 @@ AOP采用的是**横向抽取机制**
 
     ```java
     @AfterRuning(
-    	value="execution(* com.aspectJ.demo1.ProductDao.save(..))",
+    	value="execution(* com.aspectJ.demo1.ProductDao.save(.))",
     	returning="resu"
     )
     public void afterReturning(Object resu){
@@ -1429,7 +1430,7 @@ AOP采用的是**横向抽取机制**
   - **要手动调用ProceedingJoinPoint的proceed()方法，才会执行目标方法，否则目标方法的执行就会被拦截**
 
   ```java
-  @Around("execution(* com.aspectJ.demo1.ProductDao.save(..))")
+  @Around("execution(* com.aspectJ.demo1.ProductDao.save(.))")
   public Object around( ProceedingJoinPoint joinPoint )
   {
       System.out.println("==前环绕通知==");
@@ -1447,7 +1448,7 @@ AOP采用的是**横向抽取机制**
 
     ```java
     @AfterThrowing(
-        value="execution(* com.aspectJ.demo1.ProductDao.save(..))",
+        value="execution(* com.aspectJ.demo1.ProductDao.save(.))",
         throwing = "e"
     )
         public void afterThrowing(Throwable e){
@@ -1461,7 +1462,7 @@ AOP采用的是**横向抽取机制**
   - 无论是否出现异常，最终通知总是会被执行
 
   ```java
-  @After(value="execution(* com.aspectJ.demo1.ProductDao.save(..))")
+  @After(value="execution(* com.aspectJ.demo1.ProductDao.save(.))")
       public void after(){
           System.out.println("最终通知==================");
       }
@@ -1481,7 +1482,7 @@ AOP采用的是**横向抽取机制**
     }
 
 
-@Pointcut(value="execution(* com.aspectJ.demo1.ProductDao.save(..))")
+@Pointcut(value="execution(* com.aspectJ.demo1.ProductDao.save(.))")
     private void myPointcut1(){}
 
 ```
@@ -1550,19 +1551,19 @@ public class MyAspectAnno {
     }
 
 
-    @Pointcut(value="execution(* com.aspectJ.demo1.ProductDao.save(..))")
+    @Pointcut(value="execution(* com.aspectJ.demo1.ProductDao.save(.))")
     private void myPointcut1(){}
 
-    @Pointcut(value="execution(* com.aspectJ.demo1.ProductDao.update(..))")
+    @Pointcut(value="execution(* com.aspectJ.demo1.ProductDao.update(.))")
     private void myPointcut2(){}
 
-    @Pointcut(value="execution(* com.aspectJ.demo1.ProductDao.delete(..))")
+    @Pointcut(value="execution(* com.aspectJ.demo1.ProductDao.delete(.))")
     private void myPointcut3(){}
 
-    @Pointcut(value="execution(* com.aspectJ.demo1.ProductDao.findOne(..))")
+    @Pointcut(value="execution(* com.aspectJ.demo1.ProductDao.findOne(.))")
     private void myPointcut4(){}
 
-    @Pointcut(value="execution(* com.aspectJ.demo1.ProductDao.findAll(..))")
+    @Pointcut(value="execution(* com.aspectJ.demo1.ProductDao.findAll(.))")
     private void myPointcut5(){}
 }
 
@@ -1663,11 +1664,11 @@ public class MyAspectXml {
     <!--aop的相关配置=================-->
     <aop:config>
         <!--配置切入点-->
-        <aop:pointcut id="pointcut1" expression="execution(* com.aspectJ.demo2.CustomerDao.save(..))"/>
-        <aop:pointcut id="pointcut2" expression="execution(* com.aspectJ.demo2.CustomerDao.update(..))"/>
-        <aop:pointcut id="pointcut3" expression="execution(* com.aspectJ.demo2.CustomerDao.delete(..))"/>
-        <aop:pointcut id="pointcut4" expression="execution(* com.aspectJ.demo2.CustomerDao.findOne(..))"/>
-        <aop:pointcut id="pointcut5" expression="execution(* com.aspectJ.demo2.CustomerDao.findAll(..))"/>
+        <aop:pointcut id="pointcut1" expression="execution(* com.aspectJ.demo2.CustomerDao.save(.))"/>
+        <aop:pointcut id="pointcut2" expression="execution(* com.aspectJ.demo2.CustomerDao.update(.))"/>
+        <aop:pointcut id="pointcut3" expression="execution(* com.aspectJ.demo2.CustomerDao.delete(.))"/>
+        <aop:pointcut id="pointcut4" expression="execution(* com.aspectJ.demo2.CustomerDao.findOne(.))"/>
+        <aop:pointcut id="pointcut5" expression="execution(* com.aspectJ.demo2.CustomerDao.findAll(.))"/>
         <!--配置AOP的切面-->
         <aop:aspect ref="myAspectXml">
             <!--配置前置通知-->
@@ -1715,7 +1716,7 @@ public class MyAspectXml {
 
 ## 2. 本章示例的数据库表结构
 
-​	![1566457053166](../Spring%E7%AC%94%E8%AE%B0/assets/1566457053166.png)
+​	![1566457053166](./assets/1566457053166.png)
 
 ## 3. 项目Spring配置及Maven依赖
 
@@ -1852,7 +1853,7 @@ public class MyAspectXml {
 
     ```java
     int update(String sql, Object[] args)
-    int update(String sql, Object... args)//不定参数
+    int update(String sql, Object.. args)//不定参数
     
     ```
 
@@ -1927,7 +1928,7 @@ public class MyAspectXml {
   ```java
   T queryForObject (String sql, Class<T> type)
   T queryForObject (String sql, Object[] args, Class<T> type)
-  T queryForObject (String sql, Class<T> type, Object... arg)
+  T queryForObject (String sql, Class<T> type, Object.. arg)
   
   ```
 
@@ -1949,7 +1950,7 @@ public class MyAspectXml {
   ```java
   List<T> queryForList(String sql, Class<T> type)
   List<T> queryForList(String sql, Object[] args, Class<T> type)
-  List<T> queryForList(String sql, Class<T> type, Object... args)
+  List<T> queryForList(String sql, Class<T> type, Object.. args)
   
   ```
 
@@ -1973,7 +1974,7 @@ public class MyAspectXml {
   ```java
   Map queryForMap(String sql)
   Map queryForMap(String sql, Object[] args)
-  Map queryForMap(String sql, Object... args)
+  Map queryForMap(String sql, Object.. args)
   
   ```
 
@@ -1984,7 +1985,7 @@ public class MyAspectXml {
   ```java
   List< Map<String,Object> > queryForList(String sql)
   List< Map<String,Object> > queryForList(String sql, Object[] args)
-  List< Map<String,Object> > queryForList(String sql, Object... args)
+  List< Map<String,Object> > queryForList(String sql, Object.. args)
   
   ```
 
@@ -2025,7 +2026,7 @@ public class MyAspectXml {
   ```java
   T queryForObject(String sql, RowMapper<T> mapper)
   T queryForObject(String sql, Object[] args ,RowMapper<T> mapper)
-  T queryForObject(String sql, RowMapper<T> mapper, Object... args)
+  T queryForObject(String sql, RowMapper<T> mapper, Object.. args)
   
   ```
 
@@ -2045,7 +2046,7 @@ public class MyAspectXml {
   ```java
   List<T> query(String sql, RowMapper<T> mapper)
   List<T> query(String sql, Object[] args ,RowMapper<T> mapper)
-  List<T> query(String sql, RowMapper<T> mapper, Object... args)
+  List<T> query(String sql, RowMapper<T> mapper, Object.. args)
   
   ```
 
@@ -2064,7 +2065,7 @@ public class MyAspectXml {
 
 ### 1）创建实体类
 
-![1566462959465](../Spring%E7%AC%94%E8%AE%B0/assets/1566462959465.png)
+![1566462959465](./assets/1566462959465.png)
 
 ```java
 public class Course {
@@ -2187,7 +2188,7 @@ JDBC Template是Spring框架对JDBC操作的封装，简单、灵活，但是不
   - JDBC API是在JDBC Template基础上完成的这种说法是错误的
 - 在JDBCTemplate中，创建table的sql语句应该写道execute()方法中
 - 在JDBC Template中，查询复杂对象时，获取单条查询结果，使用下面的方法是错误的
-  - T queryForObject(String sql, RowMapper<T> mapper, Object... args)
+  - T queryForObject(String sql, RowMapper<T> mapper, Object.. args)
 
 # 六. 事务管理
 
@@ -2247,7 +2248,7 @@ JDBC Template是Spring框架对JDBC操作的封装，简单、灵活，但是不
 
 ### 0）Spring事务管理接口
 
-![这里写图片描述](../Spring%E7%AC%94%E8%AE%B0/assets/20160324011156424)
+![这里写图片描述](./assets/20160324011156424)
 
 ### 1）事务管理器
 
@@ -2258,7 +2259,7 @@ JDBC Template是Spring框架对JDBC操作的封装，简单、灵活，但是不
   - 接口代码如下
 
     ```java
-    Public interface PlatformTransactionManager()...{  
+    Public interface PlatformTransactionManager()..{  
         // 由TransactionDefinition得到TransactionStatus对象
         TransactionStatus getTransaction(TransactionDefinition definition) throws TransactionException; 
         // 提交
@@ -2328,7 +2329,7 @@ JDBC Template是Spring框架对JDBC操作的封装，简单、灵活，但是不
   - **可以简单的理解为JPA是标准接口，Hibernate是实现，并不是对标关系，**
   - **Hibernate属于遵循JPA规范的一种实现，但是JPA是Hibernate遵循的规范之一，Hibernate还有其他实现的规范**
 
-  ![img](../Spring%E7%AC%94%E8%AE%B0/assets/1436045-20180817162031268-1675607816.png)
+  ![img](./assets/1436045-20180817162031268-1675607816.png)
 
 - 如果计划使用JPA，需要使用Spring的`JpaTransactionManager`来处理事务
 
@@ -2369,7 +2370,7 @@ JDBC Template是Spring框架对JDBC操作的封装，简单、灵活，但是不
 
   - 定义了一些基本事务属性，事务属性可以理解为事务的一些基本配置，包括五个方面
 
-  ![这里写图片描述](../Spring%E7%AC%94%E8%AE%B0/assets/20160325003448793)
+  ![这里写图片描述](./assets/20160325003448793)
 
   - `TransactionDefinition`接口代码
 
@@ -3225,7 +3226,7 @@ methodB(){
     <aop:config>
         <!--配置切点-->
         <aop:pointcut id="interceptorPointCuts"
-            expression="execution(* com.bluesky.spring.dao.*.*(..))" />
+            expression="execution(* com.bluesky.spring.dao.*.*(.))" />
         	<!--切点表达式-->
         
         <!--配置切面-->
@@ -3566,7 +3567,7 @@ public void purchase() {
   - 事务隔离级别定义了一个事务可能受其他并发事务影响的程度
   - `ISOLATION_SERIALIZABLE`是最高的隔离级别，可以防止脏读、不可重复读、幻读，也是最慢的事务隔离级别
 
-- 在Spring中，Bean在配置时，初始化和销毁方法配置在`<bean ../>`中的标签名是`init-method`和`destory-method`
+- 在Spring中，Bean在配置时，初始化和销毁方法配置在`<bean ./>`中的标签名是`init-method`和`destory-method`
 
 - 关于事务的说法
 
@@ -3609,7 +3610,7 @@ public void purchase() {
   - `<map>`
   - `<property>`
 
-  ![1566040456028](../Spring%E7%AC%94%E8%AE%B0/assets/1566040456028.png)
+  ![1566040456028](./assets/1566040456028.png)
 
 - 在Spring中，如果bean没有配置scope属性的值，那么默认的作用域是singleton
 
